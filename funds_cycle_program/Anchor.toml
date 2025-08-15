@@ -1,0 +1,22 @@
+[toolchain]
+package_manager = "pnpm"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+funds_cycle_program = "BAmKovDnmFfuvXASrEoRa115N3F4QEBCkjUQtRAvkpAj"
+
+[programs.localnet]
+funds_cycle_program = "BAmKovDnmFfuvXASrEoRa115N3F4QEBCkjUQtRAvkpAj"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "pnpm tsx --test --tsconfig ./tsconfig.json tests/funds_cycle_program.ts"
